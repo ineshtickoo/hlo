@@ -1,7 +1,7 @@
 import React from 'react'
 import L from 'leaflet'
 import { v4 as uuidv4 } from 'uuid';
-import {MapContainer, TileLayer, Marker, Popup, FeatureGroup, Circle, Rectangle, SVGOverlay} from 'react-leaflet'
+import {MapContainer, TileLayer, Marker, Popup, FeatureGroup, Circle, Rectangle, SVGOverlay, Tooltip} from 'react-leaflet'
 
 
 const GetIcon=(_iconsize,)=>{
@@ -80,9 +80,9 @@ export default function MapSection() {
     <Marker key={uuidv4()} position={position} 
   icon={GetIcon(40)}
   >
-      <Popup>
+      <Tooltip direction="top" permanent>
        You are here
-      </Popup>
+      </Tooltip>
     </Marker>
 
 
